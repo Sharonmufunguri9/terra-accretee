@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: terra-accrete-prototype
+    runtime: php
+    plan: free
+    buildCommand: ""
+    startCommand: "php -S 0.0.0.0:$PORT"
+    envVars:
+      - key: RECIPIENT_EMAIL
+        value: hello@yourdomain.com
+      - key: FROM_EMAIL
+        value: website@yourdomain.com
+      - key: SITE_NAME
+        value: Terra-accrete Global
