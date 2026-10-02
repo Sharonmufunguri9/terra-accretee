@@ -5,6 +5,8 @@ COPY composer.json composer.lock ./
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
+RUN apt-get update && apt-get install -y --no-install-recommends git unzip && rm -rf /var/lib/apt/lists/*
+
 RUN composer install --no-dev --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins
 
 COPY . /var/www/html
