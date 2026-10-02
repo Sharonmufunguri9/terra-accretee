@@ -1,0 +1,7 @@
+{
+  "name": "sharonmufunguri9/terra-accretee",
+  "description": "Terra-accrete Global website and email forms",
+  "require": {
+    "phpmailer/phpmailer": "^7.1"
+  }
+}
