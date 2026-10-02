@@ -1,9 +1,12 @@
 <?php
 $config = require __DIR__ . '/config.php';
 
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
+if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
+    http_response_code(500);
+    exit('Mail dependency was not installed. Run "composer install" before starting the app.');
 }
+
+require __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
