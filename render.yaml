@@ -7,8 +7,18 @@ services:
     startCommand: "php -S 0.0.0.0:$PORT"
     envVars:
       - key: RECIPIENT_EMAIL
-        value: hello@yourdomain.com
+        value: sheronmufunguri@gmail.com
       - key: FROM_EMAIL
-        value: website@yourdomain.com
+        value: sheronmufunguri@gmail.com
       - key: SITE_NAME
         value: Terra-accrete Global
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USERNAME
+        value: sheronmufunguri@gmail.com
+      - key: SMTP_PASSWORD
+        value: YOUR_GMAIL_APP_PASSWORD
+      - key: SMTP_ENCRYPTION
+        value: tls
