@@ -1,10 +1,8 @@
 services:
   - type: web
     name: terra-accrete-prototype
-    runtime: php
+    runtime: docker
     plan: free
-    buildCommand: ""
-    startCommand: "php -S 0.0.0.0:$PORT"
     envVars:
       - key: RECIPIENT_EMAIL
         value: sheronmufunguri@gmail.com
@@ -19,6 +17,6 @@ services:
       - key: SMTP_USERNAME
         value: sheronmufunguri@gmail.com
       - key: SMTP_PASSWORD
-        value: YOUR_GMAIL_APP_PASSWORD
+        sync: false
       - key: SMTP_ENCRYPTION
         value: tls
